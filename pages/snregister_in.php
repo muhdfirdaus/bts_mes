@@ -83,4 +83,16 @@ else{
         echo '<script type="text/javascript">alert("'.$existmsg.'");</script>';
         echo "<script>window.history.back();</script>"; 
     }
+    else{
+        $i=1;
+        while($i<=$limit){
+            $bbuild= $_POST['bbuild'.$i];
+            $pcba= $_POST['pcba'.$i];
+            mysqli_query($con,"INSERT INTO sn_register(boxbuild_sn,pcba_sn, timestamp, user_id)VALUES('$bbuild','$pcba','$tmstmp','$id')")or die(mysqli_error($con));
+            
+            $i++;
+        }
+        echo "<script type='text/javascript'>alert('Data saved!');</script>";
+        echo "<script type='text/javascript'>document.location='snregister.php'</script>";  
+    }
 }
