@@ -70,8 +70,9 @@ endif;
             <div class="panel panel-default">
               <div class="panel-heading"><b>Link Serial Number</b></div>
               <div class="panel-body">
-                <form id="form_box" class="form-horizontal" method="post" action="carton_in.php" enctype='multipart/form-data'>
+                <form id="form_box" class="form-horizontal" method="post" action="snregister_in.php" enctype='multipart/form-data'>
                   <p>No. of S/N: 
+                    <input type="hidden" name="limit" id="limit" value="<?php echo $limit; ?>"></input>
                     <select name="no_box" id="no_box" >
                       <option value="1" <?php if ($limit==1){ echo "selected";}?>>1</option>
                       <option value="2" <?php if ($limit==2){ echo "selected";}?>>2</option>
@@ -85,7 +86,6 @@ endif;
                       <option value="10" <?php if ($limit==10){ echo "selected";}?>>10</option>
                     </select>
                   </p><br>
-                  <input type="hidden" name="carton_id" id="carton_id" value="<?php echo $next_carton_id; ?>"></input>
                   <table class="table table-bordered table-striped">
                     <thead>
                       <th class="info text-center">Item</th>
@@ -96,7 +96,7 @@ endif;
                       <?php for ($i=1; $i<=$limit; $i++) {
                           echo '<tr><td class="text-center">'.$i.'</td>
                           <td class="text-center"><input class="form-control text-center" maxlength="8" required name="pcba'.$i.'" id="pcba'.$i.'" </td>
-                          <td class="text-center"><input class="form-control text-center" maxlength="8" required name="cust'.$i.'" id="cust'.$i.'" </td>';
+                          <td class="text-center"><input class="form-control text-center" maxlength="8" required name="bbuild'.$i.'" id="bbuild'.$i.'" </td>';
                       }
                       ?>
                     </tbody>

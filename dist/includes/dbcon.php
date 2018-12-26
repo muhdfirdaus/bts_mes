@@ -2,7 +2,7 @@
 $host = "localhost"; //server
 $uname = "root"; //username
 $pass = ""; //password
-$dbname = "pcba_prod"; //db name
+$dbname = "pcba_mes"; //db name
 $con = mysqli_connect($host,$uname,$pass,$dbname);
 
 // Check connection
