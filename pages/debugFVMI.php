@@ -59,40 +59,203 @@ endif;
       <!-- Full Width Column -->
       <div class="content-wrapper">
         <div class="container">
-          <!-- Content Header (Page header) -->
-         
+          <!-- Content Header (Page header) --> 
+		 
           <!-- Main content -->
           <section class="content">
             <div class="panel panel-default">
               <div class="panel-heading"><b>Debug FVMI</b></div>
               <div class="panel-body">
-                <form id="form_box" class="form-horizontal" method="post" action="carton_in.php" enctype='multipart/form-data'>
-                  <p>PCBA S/N: <b>IL91240MN</b></p>
-                  <p>Customer S/N: <b>16009830</b></p>
+                <form id="form_box" class="form-horizontal" method="post" action="debugfvmi_in.php" enctype='multipart/form-data'>
+                  <p>PCBA S/N: <input type="text"  name="pcba_sn" id="pcba_sn" value="<?php echo $rows['pcba_sn']; ?> "/></p>
+                  <p>Customer S/N: <input type="text"  name="cus_sn" id="cus_sn" value="<?php echo $rows['boxbuild_sn']; ?> " /></p>
+				  <p>Please select defect code. If more then 5 defect, click unlink. Product will rejected!</p>
                   <br>
-                  <input type="hidden" name="carton_id" id="carton_id" value="<?php echo $next_carton_id; ?>"></input>
+                 
                   <table class="table table-bordered table-striped">
                     <thead>
-                      <th class="info text-center">Item</th>
                       <th class="info text-center">Defect Code</th>
+					  <th class="info text-center">Component Part</th>
+					  <th class="info text-center">Defect Location</th>
                       <th class="info text-center">Remarks</th>
                     </thead>
                     <tbody>
                           <tr>
-                            <td class="text-center">1</td>
                             <td class="text-center"><select class="form-control" name="defectcode" id="defectcode">
-                                <option value="113524">113524</option>
-                                <option value="252345">252345</option>
-                                <option value="351235">351235</option>
-                                <option value="434673">434673</option>
-                                <option value="512388">512388</option>
-                                <option value="690812">690812</option>
+								<option value="Null">Null</option>
+                                <option value="f01">F01 - Defective Component</option>
+                                <option value="f02">F02 - Bended/Lifted Lead</option>
+                                <option value="f03">F03 - Chip/Knock Off</option>
+                                <option value="f04">F04 - Damage</option>
+                                <option value="f05">F05 - Delamination / Warpage</option>
+                                <option value="f06">F06 - Dirty, Flux & stain</option>
+								<option value="f07">F07 - Eeprom Reprogram</option>
+								<option value="f08">F08 - Excess solder</option>
+								<option value="f09">F09 - Insufficient Solder</option>
+								<option value="f10">F10 - Lifted Pad</option>
+								<option value="f11">F11 - Misalignment</option>
+								<option value="f12">F12 - Missing Component</option>
+								<option value="f13">F13 - No Defect Found</option>
+								<option value="f14">F14 - No Insert / Wrong Insert</option>
+								<option value="f15">F15 - No Programming</option>
+								<option value="f16">F16 - No Solder / Non Wetting</option>
+								<option value="f17">F17 - Open & Short Circuit / Scrap</option>
+								<option value="f18">F18 - Overturn / Tombstone</option>
+								<option value="f19">F19 - Solder Short</option>
+								<option value="f20">F20 - Swap</option>
+								<option value="f21">F21 - Wrong Component / Value</option>
+								<option value="f20">F22 - Wrong Polarity</option>
+								<option value="f20">F23 - Extra Trace</option>
+								<option value="f20">F24 - Re-heat</option>
+								<option value="f20">F25 - Re-Assembled</option>
+								<option value="f20">F26 - Cosmetic Failure</option>
                             </select></td>
-                            <td class="text-center"><textarea class="form-control" style="resize:none" rows="4" cols="120" required name="remarks" id="remarks" maxlength="322"></textarea></td>
-                    </tbody>
+							<td class="text-center"><input type="text" class="form-control" name="component" id="component" /></td>
+							<td class="text-center"><input type="text" class="form-control" name="location" id="location" /></td>
+                            <td class="text-center"><textarea class="form-control" style="resize:none" rows="2" cols="50" name="remark" id="remark" maxlength="322"></textarea></td>
+                          </tr>
+						  <tr>
+                            <td class="text-center"><select class="form-control" name="defectcode2" id="defectcode2">
+								<option value="Null">Null</option>
+                                <option value="f01">F01 - Defective Component</option>
+                                <option value="f02">F02 - Bended/Lifted Lead</option>
+                                <option value="f03">F03 - Chip/Knock Off</option>
+                                <option value="f04">F04 - Damage</option>
+                                <option value="f05">F05 - Delamination / Warpage</option>
+                                <option value="f06">F06 - Dirty, Flux & stain</option>
+								<option value="f07">F07 - Eeprom Reprogram</option>
+								<option value="f08">F08 - Excess solder</option>
+								<option value="f09">F09 - Insufficient Solder</option>
+								<option value="f10">F10 - Lifted Pad</option>
+								<option value="f11">F11 - Misalignment</option>
+								<option value="f12">F12 - Missing Component</option>
+								<option value="f13">F13 - No Defect Found</option>
+								<option value="f14">F14 - No Insert / Wrong Insert</option>
+								<option value="f15">F15 - No Programming</option>
+								<option value="f16">F16 - No Solder / Non Wetting</option>
+								<option value="f17">F17 - Open & Short Circuit / Scrap</option>
+								<option value="f18">F18 - Overturn / Tombstone</option>
+								<option value="f19">F19 - Solder Short</option>
+								<option value="f20">F20 - Swap</option>
+								<option value="f21">F21 - Wrong Component / Value</option>
+								<option value="f20">F22 - Wrong Polarity</option>
+								<option value="f20">F23 - Extra Trace</option>
+								<option value="f20">F24 - Re-heat</option>
+								<option value="f20">F25 - Re-Assembled</option>
+								<option value="f20">F26 - Cosmetic Failure</option>
+                            </select></td>
+							<td class="text-center"><input type="text" class="form-control" name="component2" id="component2" /></td>
+							<td class="text-center"><input type="text" class="form-control" name="location2" id="location2" /></td>
+                            <td class="text-center"><textarea class="form-control" style="resize:none" rows="2" cols="50" name="remark2" id="remark2" maxlength="322"></textarea></td>
+                          </tr>
+						  <tr>
+                            <td class="text-center"><select class="form-control" name="defectcode3" id="defectcode3">
+								<option value="Null">Null</option>
+                                <option value="f01">F01 - Defective Component</option>
+                                <option value="f02">F02 - Bended/Lifted Lead</option>
+                                <option value="f03">F03 - Chip/Knock Off</option>
+                                <option value="f04">F04 - Damage</option>
+                                <option value="f05">F05 - Delamination / Warpage</option>
+                                <option value="f06">F06 - Dirty, Flux & stain</option>
+								<option value="f07">F07 - Eeprom Reprogram</option>
+								<option value="f08">F08 - Excess solder</option>
+								<option value="f09">F09 - Insufficient Solder</option>
+								<option value="f10">F10 - Lifted Pad</option>
+								<option value="f11">F11 - Misalignment</option>
+								<option value="f12">F12 - Missing Component</option>
+								<option value="f13">F13 - No Defect Found</option>
+								<option value="f14">F14 - No Insert / Wrong Insert</option>
+								<option value="f15">F15 - No Programming</option>
+								<option value="f16">F16 - No Solder / Non Wetting</option>
+								<option value="f17">F17 - Open & Short Circuit / Scrap</option>
+								<option value="f18">F18 - Overturn / Tombstone</option>
+								<option value="f19">F19 - Solder Short</option>
+								<option value="f20">F20 - Swap</option>
+								<option value="f21">F21 - Wrong Component / Value</option>
+								<option value="f20">F22 - Wrong Polarity</option>
+								<option value="f20">F23 - Extra Trace</option>
+								<option value="f20">F24 - Re-heat</option>
+								<option value="f20">F25 - Re-Assembled</option>
+								<option value="f20">F26 - Cosmetic Failure</option>
+                            </select></td>
+							<td class="text-center"><input type="text" class="form-control" name="component3" id="component3" /></td>
+							<td class="text-center"><input type="text" class="form-control" name="location3" id="location3" /></td>
+                            <td class="text-center"><textarea class="form-control" style="resize:none" rows="2" cols="50" name="remark3" id="remark3" maxlength="322"></textarea></td>
+                          </tr>
+						  <tr>
+                            <td class="text-center"><select class="form-control" name="defectcode4" id="defectcode4">
+								<option value="Null">Null</option>
+                                <option value="f01">F01 - Defective Component</option>
+                                <option value="f02">F02 - Bended/Lifted Lead</option>
+                                <option value="f03">F03 - Chip/Knock Off</option>
+                                <option value="f04">F04 - Damage</option>
+                                <option value="f05">F05 - Delamination / Warpage</option>
+                                <option value="f06">F06 - Dirty, Flux & stain</option>
+								<option value="f07">F07 - Eeprom Reprogram</option>
+								<option value="f08">F08 - Excess solder</option>
+								<option value="f09">F09 - Insufficient Solder</option>
+								<option value="f10">F10 - Lifted Pad</option>
+								<option value="f11">F11 - Misalignment</option>
+								<option value="f12">F12 - Missing Component</option>
+								<option value="f13">F13 - No Defect Found</option>
+								<option value="f14">F14 - No Insert / Wrong Insert</option>
+								<option value="f15">F15 - No Programming</option>
+								<option value="f16">F16 - No Solder / Non Wetting</option>
+								<option value="f17">F17 - Open & Short Circuit / Scrap</option>
+								<option value="f18">F18 - Overturn / Tombstone</option>
+								<option value="f19">F19 - Solder Short</option>
+								<option value="f20">F20 - Swap</option>
+								<option value="f21">F21 - Wrong Component / Value</option>
+								<option value="f20">F22 - Wrong Polarity</option>
+								<option value="f20">F23 - Extra Trace</option>
+								<option value="f20">F24 - Re-heat</option>
+								<option value="f20">F25 - Re-Assembled</option>
+								<option value="f20">F26 - Cosmetic Failure</option>
+                            </select></td>
+							<td class="text-center"><input type="text" class="form-control" name="component4" id="component4" /></td>
+							<td class="text-center"><input type="text" class="form-control" name="location4" id="location4" /></td>
+                            <td class="text-center"><textarea class="form-control" style="resize:none" rows="2" cols="50" name="remark4" id="remark4" maxlength="322"></textarea></td>
+                          </tr>
+						  <tr>
+                            <td class="text-center"><select class="form-control" name="defectcode5" id="defectcode5">
+								<option value="Null">Null</option>
+                                <option value="f01">F01 - Defective Component</option>
+                                <option value="f02">F02 - Bended/Lifted Lead</option>
+                                <option value="f03">F03 - Chip/Knock Off</option>
+                                <option value="f04">F04 - Damage</option>
+                                <option value="f05">F05 - Delamination / Warpage</option>
+                                <option value="f06">F06 - Dirty, Flux & stain</option>
+								<option value="f07">F07 - Eeprom Reprogram</option>
+								<option value="f08">F08 - Excess solder</option>
+								<option value="f09">F09 - Insufficient Solder</option>
+								<option value="f10">F10 - Lifted Pad</option>
+								<option value="f11">F11 - Misalignment</option>
+								<option value="f12">F12 - Missing Component</option>
+								<option value="f13">F13 - No Defect Found</option>
+								<option value="f14">F14 - No Insert / Wrong Insert</option>
+								<option value="f15">F15 - No Programming</option>
+								<option value="f16">F16 - No Solder / Non Wetting</option>
+								<option value="f17">F17 - Open & Short Circuit / Scrap</option>
+								<option value="f18">F18 - Overturn / Tombstone</option>
+								<option value="f19">F19 - Solder Short</option>
+								<option value="f20">F20 - Swap</option>
+								<option value="f21">F21 - Wrong Component / Value</option>
+								<option value="f20">F22 - Wrong Polarity</option>
+								<option value="f20">F23 - Extra Trace</option>
+								<option value="f20">F24 - Re-heat</option>
+								<option value="f20">F25 - Re-Assembled</option>
+								<option value="f20">F26 - Cosmetic Failure</option>
+                            </select></td>
+							<td class="text-center"><input type="text" class="form-control" name="component5" id="component5" /></td>
+							<td class="text-center"><input type="text" class="form-control" name="location5" id="location5" /></td>
+                            <td class="text-center"><textarea class="form-control" style="resize:none" rows="2" cols="50" name="remark5" id="remark5" maxlength="322"></textarea></td>
+                          </tr>
+				   </tbody>
                   </table>
+				  <button type="button" id="btn_box" class="btn btn-primary" style="float: right;">Unlink</button>
+				  <button type="submit" id="btn_box" class="btn btn-primary" style="float: right;">Save</button>
                 </form>
-                <button type="button" id="btn_box" class="btn btn-primary" style="float: right;">Save & Unlink</button>
+				
               </div>
             </div>
 
