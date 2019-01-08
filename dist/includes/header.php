@@ -12,7 +12,7 @@ date_default_timezone_set("Asia/Singapore");
         <nav class="navbar navbar-static-top">
           <div class="container-fluid"><meta http-equiv="refresh" content="1800;url=logoutlanding.php"/>
             <div class="navbar-header" style="padding-left:20px">
-              <a  class="navbar-brand"><b><i class="glyphicon glyphicon-home"></i> Beyonics BTS MES </b></a>
+              <a href="home_iloq_backend.php" class="navbar-brand"><b><i class="glyphicon glyphicon-home"></i> Beyonics BTS MES </b></a>
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                 <i class="fa fa-bars"></i>
               </button>

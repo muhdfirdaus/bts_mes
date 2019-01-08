@@ -25,7 +25,7 @@ endif;
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
-                        <a href="home_iloq.php"><strong>iLOQ</strong></a>
+                        <a href="#"><strong>SMT</strong></a>
                     </p>
                     <div class="clr"></div>
                 </li>
@@ -36,32 +36,32 @@ endif;
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
-                        <a href="#"><strong>Carling</strong></a>
+                        <a href="home_iloq_backend.php"><strong>Backend</strong></a>
                     </p>
                     <div class="clr"></div>
                 </li>
 
                 <li class="li">
                     <span class="icon">
-                        <i class="fa fa-retweet fa-2x icon1" aria-hidden="true"></i>
+                        <i class="fa fa-chevron-circle-left fa-2x icon1" aria-hidden="true"></i>
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
-                        <a href="#"><strong>Hauppauge</strong></a>
+                        <a href="home.php"><strong>Back</strong></a>
                     </p>
                     <div class="clr"></div>
                 </li>
 
-                <li class="li">
+                <!-- <li class="li">
                     <span class="icon">
-                        <i class="fa fa-power-off fa-2x icon1" aria-hidden="true"></i>
+                        <i class="fa fa-wrench fa-2x icon1" aria-hidden="true"></i>
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
-                        <a href="logout.php"><strong>Logout</strong></a>
+                        <a href="http://my-app01.my.beyonics.com/ccms/"><strong>CCS</strong></a>
                     </p>
                     <div class="clr"></div>
-                </li>
+                </li> -->
 
                 <!-- <li class="li">
                     <span class="icon">

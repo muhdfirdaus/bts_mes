@@ -25,7 +25,7 @@ endif;
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
-                        <a href="home_iloq.php"><strong>iLOQ</strong></a>
+                        <a href="snregister.php"><strong>Boxbuild SN Register</strong></a>
                     </p>
                     <div class="clr"></div>
                 </li>
@@ -36,7 +36,7 @@ endif;
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
-                        <a href="#"><strong>Carling</strong></a>
+                        <a href="finalVMI.php"><strong>FVMI</strong></a>
                     </p>
                     <div class="clr"></div>
                 </li>
@@ -47,43 +47,43 @@ endif;
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
-                        <a href="#"><strong>Hauppauge</strong></a>
+                        <a href="#"><strong>Pack</strong></a>
                     </p>
                     <div class="clr"></div>
                 </li>
 
                 <li class="li">
                     <span class="icon">
-                        <i class="fa fa-power-off fa-2x icon1" aria-hidden="true"></i>
+                        <i class="fa fa-wrench fa-2x icon1" aria-hidden="true"></i>
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
-                        <a href="logout.php"><strong>Logout</strong></a>
+                        <a href="#"><strong>OBA</strong></a>
                     </p>
                     <div class="clr"></div>
                 </li>
 
-                <!-- <li class="li">
+                <li class="li">
                     <span class="icon">
                         <i class="fa fa-building fa-2x icon1" aria-hidden="true"></i>
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
-                        <a href="http://my-app01.my.beyonics.com/erp/"><strong>eFactory</strong></a>
+                        <a href="#"><strong>Ship</strong></a>
                     </p>
                     <div class="clr"></div>
-                </li> -->
+                </li>
 
-                <!-- <li class="li">
+                <li class="li">
                     <span class="icon">
-                        <i class="fa fa fa-users fa-2x icon1" aria-hidden="true"></i>
+                        <i class="fa fa-chevron-circle-left fa-2x icon1" aria-hidden="true"></i>
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
-                        <a href="http://eapps.beyonics.com/telephone/navmenuResults.asp"><strong>Employee Directory</strong></a>
+                        <a href="home_iloq.php"><strong>Back</strong></a>
                     </p>
                     <div class="clr"></div>
-                </li> -->
+                </li>
 				
 				
                

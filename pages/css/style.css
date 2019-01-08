@@ -1,0 +1,122 @@
+body{
+    background: #333d4b;
+}
+
+.cointainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#list{
+    list-style: none;
+}
+
+ul{
+    padding: 0; margin: 0;
+}
+
+.li{
+    width: 375px;
+    margin-top: -19px;
+}
+
+.icon{
+    float: left;
+    background: #fff;
+    width: 80px;
+    height: 60px;
+    border-right: 15px solid #4A5C7A  ;
+    position: relative;
+}
+
+.icon1{
+    margin: 14px 26px;
+    color: #333d4b;
+}
+
+.clr{
+    clear: both;
+}
+
+.text{
+    height: 60px;
+    background:#D3DEF0;
+    padding-left: 105px;
+    border-right: 15px solid #4A5C7A  ;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: Calibri;
+    line-height: 60px;
+	
+}
+
+a{
+    text-decoration: none;
+    color: #333d4b;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.li p {
+    transition: all 0.9s ease-in-out;
+	-moz-transition: all 0.9s ease-in-out;
+    -webkit-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    -ms-transition: all 0.9s ease-in-out;
+}
+
+.li:hover p{
+    width: 255px;
+    padding-left: 120px;
+    background: #ffc107;
+    border-right: 15px solid #b68900;
+    /*transition: all 0.9s ease-in-out;
+	-moz-transition: all 0.9s ease-in-out;
+    -webkit-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    -ms-transition: all 0.9s ease-in-out;*/
+
+    /*transition-timing-function: ease-in-out;*/
+}
+
+.li p:hover{
+    transition: all 0.9s ease-in-out;
+	-moz-transition: all 0.9s ease-in-out;
+    -webkit-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    -ms-transition: all 0.9s ease-in-out;
+}
+
+.li:hover .icon{
+    border-right: 15px solid #b68900;
+}
+
+.li:hover .icon1{
+    color: #ffc107;
+}
+
+.li:hover {
+    cursor: pointer;
+    /*transition: all 0.9s ease-in-out;
+	-moz-transition: all 0.9s ease-in-out;
+    -webkit-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    -ms-transition: all 0.9s ease-in-out;*/
+}
+
+.li:hover .tooltip{
+    display: block;
+}
+
+.tooltip{
+    left: 58px;
+    top: 20px;
+    position: absolute;
+    width: 0;
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent #b68900 transparent transparent;
+    display: none;
+}
