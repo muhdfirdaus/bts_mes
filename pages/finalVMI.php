@@ -62,15 +62,16 @@ endif;
       <div class="content-wrapper">
           <!-- Main content -->
          <?php 
-         isset($_GET['limit'])? $limit = $_GET['limit'] : $limit = 6;
+         isset($_GET['limit'])? $limit = $_GET['limit'] : $limit = 1;
          $limit>6 ? $limit=6 : $limit = $limit; 
          ?>
           <section class="content">
             <div class="panel panel-default">
               <div class="panel-heading"><b>Final VMI</b></div>
               <div class="panel-body">
-                <form id="form_box" class="form-horizontal" method="post" action="box_in.php" enctype='multipart/form-data'>
+                <form id="form_box" class="form-horizontal" method="post" action="finalVMI_in.php" enctype='multipart/form-data'>
                   <p>No. of S/N: 
+                    <input type="hidden" name="limit" id="limit" value="<?php echo $limit; ?>"></input>
                     <select name="no_box" id="no_box" >
                         <option value="1" <?php if($limit==1){echo"selected";} ?>>1</option>
                         <option value="2" <?php if($limit==2){echo"selected";} ?>>2</option>
@@ -92,9 +93,9 @@ endif;
                           echo '<tr><td class="text-center">'.$i.'</td>
                           <td class="text-center"><input class="form-control text-center" maxlength="8" required name="sn'.$i.'" id="sn'.$i.'" </td>
                           <td class="text-center">
-                          <select class="form-control">
-                            <option value="PASS"  style="background-color: green; color: white">PASS</option>
-                            <option value="FAIL"  style="background-color: red">FAIL</option>
+                          <select class="form-control" name="result'.$i.'">
+                            <option value="P"  style="background-color: green; color: white">PASS</option>
+                            <option value="F"  style="background-color: red">FAIL</option>
                           </select></td>';
                           // <input class="form-control text-center" maxlength="8" required name="sn'.$i.'" id="sn'.$i.'" 
                           // </td>';
@@ -103,7 +104,7 @@ endif;
                     </tbody>
                   </table>
                 </form>
-                <button type="button" id="btn_box" class="btn btn-primary" style="float: right;">Proceed</button>
+                <button type="button" id="btn_box" class="btn btn-primary" style="float: right;">Next</button>
               </div>
             </div>
 
