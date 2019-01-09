@@ -21,7 +21,7 @@ endif;
                 <li class="li">
                     <span class="icon">
                         <!-- <i class="fa fa-home fa-2x icon1 " aria-hidden="true"></i> -->
-                        <i class="fa fa-dropbox fa-2x icon1 " aria-hidden="true"></i>
+                        <i class="fa fa-industry fa-2x icon1 " aria-hidden="true"></i>
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
@@ -32,7 +32,7 @@ endif;
 
                 <li class="li">
                     <span class="icon">
-                        <i class="fa fa-navicon fa-2x icon1" aria-hidden="true"></i>
+                        <i class="fa fa-cubes fa-2x icon1" aria-hidden="true"></i>
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">

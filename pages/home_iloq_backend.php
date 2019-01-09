@@ -21,7 +21,7 @@ endif;
                 <li class="li">
                     <span class="icon">
                         <!-- <i class="fa fa-home fa-2x icon1 " aria-hidden="true"></i> -->
-                        <i class="fa fa-dropbox fa-2x icon1 " aria-hidden="true"></i>
+                        <i class="fa fa-barcode fa-2x icon1 " aria-hidden="true"></i>
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
@@ -32,7 +32,7 @@ endif;
 
                 <li class="li">
                     <span class="icon">
-                        <i class="fa fa-navicon fa-2x icon1" aria-hidden="true"></i>
+                        <i class="fa fa-search fa-2x icon1" aria-hidden="true"></i>
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
@@ -43,7 +43,29 @@ endif;
 
                 <li class="li">
                     <span class="icon">
+                        <i class="fa fa-bug fa-2x icon1" aria-hidden="true"></i>
+                        <i class="tooltip"></i>
+                    </span>
+                    <p class="text">
+                        <a href="debugFVMI.php"><strong>Debug FVMI</strong></a>
+                    </p>
+                    <div class="clr"></div>
+                </li>
+
+                <li class="li">
+                    <span class="icon">
                         <i class="fa fa-retweet fa-2x icon1" aria-hidden="true"></i>
+                        <i class="tooltip"></i>
+                    </span>
+                    <p class="text">
+                        <a href="#"><strong>Rework FVMI</strong></a>
+                    </p>
+                    <div class="clr"></div>
+                </li>
+
+                <li class="li">
+                    <span class="icon">
+                        <i class="fa fa-cube fa-2x icon1" aria-hidden="true"></i>
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
@@ -54,7 +76,7 @@ endif;
 
                 <li class="li">
                     <span class="icon">
-                        <i class="fa fa-wrench fa-2x icon1" aria-hidden="true"></i>
+                        <i class="fa fa-search fa-2x icon1" aria-hidden="true"></i>
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
@@ -65,7 +87,7 @@ endif;
 
                 <li class="li">
                     <span class="icon">
-                        <i class="fa fa-building fa-2x icon1" aria-hidden="true"></i>
+                        <i class="fa fa-truck fa-2x icon1" aria-hidden="true"></i>
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
