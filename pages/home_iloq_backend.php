@@ -47,7 +47,7 @@ endif;
                         <i class="tooltip"></i>
                     </span>
                     <p class="text">
-                        <a href="debugFVMI.php"><strong>Debug FVMI</strong></a>
+                        <a href="testFVMI.php"><strong>Debug FVMI</strong></a>
                     </p>
                     <div class="clr"></div>
                 </li>
