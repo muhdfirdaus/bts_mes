@@ -60,15 +60,15 @@ endif;
       <div class="content-wrapper">
         <div class="container">
           <!-- Content Header (Page header) --> 
-		 
+		
           <!-- Main content -->
           <section class="content">
             <div class="panel panel-default">
               <div class="panel-heading"><b>Debug FVMI</b></div>
               <div class="panel-body">
                 <form id="form_box" class="form-horizontal" method="post" action="debugfvmi_in.php" enctype='multipart/form-data'>
-                  <p>PCBA S/N: <input type="text"  name="pcba_sn" id="pcba_sn" value="<?php echo $rows['pcba_sn']; ?> "/></p>
-                  <p>Customer S/N: <input type="text"  name="cus_sn" id="cus_sn" value="<?php echo $rows['boxbuild_sn']; ?> " /></p>
+                  
+                  <p>Customer S/N: <input type="text" name="cus_sn" id="cus_sn" /></p>
 				  <p>Please select defect code. If more then 5 defect, click unlink. Product will rejected!</p>
                   <br>
                  
@@ -252,7 +252,7 @@ endif;
                           </tr>
 				   </tbody>
                   </table>
-				  <button type="button" id="btn_box" class="btn btn-primary" style="float: right;">Unlink</button>
+				  <button type="button" id="btn_box" class="btn btn-primary" style="float: right;" disabled >Unlink</button>
 				  <button type="submit" id="btn_box" class="btn btn-primary" style="float: right;">Save</button>
                 </form>
 				

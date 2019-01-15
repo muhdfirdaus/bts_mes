@@ -67,7 +67,7 @@ endif;
               <div class="panel-heading"><b>Debug FVMI</b></div>
               <div class="panel-body">
                 <form id="form_box" class="form-horizontal" method="post" action="testfvmi_in.php" enctype='multipart/form-data'>
-                  <p>PCBA S/N: <input type="text"  name="pcba_sn" id="pcba_sn" /></p>
+                 
                   <p>Customer S/N: <input type="text"  name="cus_sn" id="cus_sn" /></p>
 				  <button type="submit" id="btn_box" class="btn btn-primary" style="float: right;">Check</button>
                   <br>
